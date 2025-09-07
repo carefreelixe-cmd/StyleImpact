@@ -74,7 +74,7 @@ const Navbar = ({ currentPage, onNavigate }) => {
     <div className="w-full fixed top-0 left-0 right-0 z-50">
       {/* Main Navbar */}
       <nav className="bg-white shadow-sm border-b border-gray-100 relative z-30 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-2">
           <div className="flex justify-between items-center h-16">
             {/* Logo - Animated on hover */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer" onClick={() => handleNavItemClick('Home')}>
@@ -340,7 +340,7 @@ const Navbar = ({ currentPage, onNavigate }) => {
       </nav>
 
       {/* Promo Banner - Slide animation */}
-      <div className="bg-black text-white text-center py-2 px-4 relative z-20 overflow-hidden">
+      <div className="bg-black text-white text-center py-3 px-4 relative z-20 overflow-hidden">
         <div className="">
           <p className="text-sm transition-all duration-300 hover:scale-105 inline-block cursor-pointer">
             Win ₹ 1,00,000 • Runner-up ₹ 11,000 | Entry ₹ 299
