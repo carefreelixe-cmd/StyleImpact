@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12 sm:py-16">
