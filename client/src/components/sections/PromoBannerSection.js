@@ -1,5 +1,5 @@
 import React from 'react';
-
+import fashionDesign from '../../assests/fashion deisgn.jpg'
 const PromoBannerSection = () => (
   <section className="py-12 sm:py-16 lg:py-20 bg-primary text-black">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ const PromoBannerSection = () => (
         </div>
         <div className="relative order-1 lg:order-2">
           <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" 
+            src={fashionDesign}
             alt="Creative Competition"
             className="rounded-xl shadow-2xl w-full"
           />
