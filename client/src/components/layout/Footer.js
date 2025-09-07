@@ -87,8 +87,8 @@ const Footer = () => {
               © 2025 Style Impact. All rights reserved.
             </p>
             <div className="flex items-center pr-2 space-x-2 text-sm text-gray-400">
-              <span>  Made with</span>
-              <span className="text-primary animate-pulse">❤️</span>
+              <span className="ml-2">  Made with</span>
+              <span className="text-primary">❤️</span>
               <span>in India</span>
             </div>
           </div>
