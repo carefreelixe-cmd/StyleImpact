@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Navbar from './components/layout/Navbar';
-import StyleImpactApp from './pages/Welcome/WelcomePage';
+import WelcomePage from './pages/Welcome/WelcomePage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const handleNavigation = (page) => {
-    // Convert navbar menu items to page names
+    // Convert navbar menu items to page names for scrolling
     const pageMapping = {
       'Home': 'home',
       'Categories': 'categories', 
@@ -25,7 +25,7 @@ function App() {
         currentPage={currentPage}
         onNavigate={handleNavigation}
       />
-      <StyleImpactApp 
+      <WelcomePage 
         currentPage={currentPage}
         onNavigate={setCurrentPage}
       />
