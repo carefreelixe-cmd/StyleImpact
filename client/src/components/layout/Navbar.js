@@ -349,7 +349,7 @@ const Navbar = ({ currentPage, onNavigate }) => {
       </div>
 
       {/* Mobile Menu - Slide down animation */}
-      <div className={`lg:hidden absolute top-[90px] left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-10 overflow-hidden transition-all duration-500 ease-out ${
+      <div className={`lg:hidden absolute top-[100px] left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-10 overflow-hidden transition-all duration-500 ease-out ${
         isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       }`}>
         <div className="px-4 pt-3 pb-3 space-y-1">
