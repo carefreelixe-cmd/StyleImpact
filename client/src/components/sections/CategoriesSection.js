@@ -19,7 +19,7 @@ const CategoriesSection = () => (
           <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
             <div className="aspect-[4/5] bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=500&fit=crop" 
+                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=400&h=500&fit=crop" 
                 alt="Fashion Design"
                 className="w-full h-full object-cover"
               />
@@ -44,7 +44,7 @@ const CategoriesSection = () => (
           <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
             <div className="aspect-[4/5] bg-gradient-to-br from-pink-100 to-rose-100 flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop" 
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=500&fit=crop" 
                 alt="Beauty Expert"
                 className="w-full h-full object-cover"
               />
@@ -69,7 +69,7 @@ const CategoriesSection = () => (
           <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
             <div className="aspect-[4/5] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=400&h=500&fit=crop" 
+                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=500&fit=crop" 
                 alt="Tattoo Art"
                 className="w-full h-full object-cover"
               />
