@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { User, Menu, X, Trophy, HelpCircle, Users, Home, Calendar, Clock, Phone } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { User, Menu, X, Trophy, HelpCircle, Users, Home, Calendar, Clock, MessageCircle } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ currentPage, onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showContestDropdown, setShowContestDropdown] = useState(false);
   const [activeItem, setActiveItem] = useState('Home');
@@ -11,8 +11,22 @@ const Navbar = () => {
     { name: 'Categories', icon: Menu },
     { name: 'How it Works', icon: HelpCircle },
     { name: 'Winners', icon: Trophy },
-    { name: 'Contact', icon: Phone },
+    { name: 'FAQ', icon: MessageCircle },
   ];
+
+  // Update active item when currentPage changes
+  useEffect(() => {
+    const pageToNavMapping = {
+      'home': 'Home',
+      'categories': 'Categories',
+      'how-it-works': 'How it Works',
+      'winners': 'Winners',
+      'faq': 'FAQ'
+    };
+    
+    const navItem = pageToNavMapping[currentPage] || 'Home';
+    setActiveItem(navItem);
+  }, [currentPage]);
 
   const handleMobileContestClick = () => {
     setShowContestDropdown(!showContestDropdown);
@@ -20,21 +34,50 @@ const Navbar = () => {
 
   const handleNavItemClick = (itemName) => {
     setActiveItem(itemName);
+    setIsMenuOpen(false); // Close mobile menu
+    setShowContestDropdown(false); // Close dropdown
+    
+    // Navigation handler for smooth scrolling
+    const sectionMap = {
+      'Home': 'hero-section',
+      'Categories': 'categories-section', 
+      'How it Works': 'how-it-works-section',
+      'Winners': 'testimonials-section',
+      'FAQ': 'faq-section'
+    };
+
+    const targetId = sectionMap[itemName];
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        const navbarHeight = 89; // Height of navbar + promo banner
+        const elementPosition = element.offsetTop - navbarHeight;
+        
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+    
+    // Call the navigation function if provided
+    if (onNavigate) {
+      onNavigate(itemName);
+    }
   };
 
   const handleMobileNavItemClick = (itemName) => {
-    setActiveItem(itemName);
-    setIsMenuOpen(false);
+    handleNavItemClick(itemName); // Use the same handler for consistency
   };
 
   return (
-    <div className="w-full relative">
+    <div className="w-full fixed top-0 left-0 right-0 z-50">
       {/* Main Navbar */}
       <nav className="bg-white shadow-sm border-b border-gray-100 relative z-30 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo - Animated on hover */}
-            <div className="flex-shrink-0 flex items-center group cursor-pointer">
+            <div className="flex-shrink-0 flex items-center group cursor-pointer" onClick={() => handleNavItemClick('Home')}>
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:bg-yellow-400">
                 <span className="text-black font-bold text-lg transition-all duration-300 group-hover:scale-105">S</span>
               </div>
@@ -329,10 +372,7 @@ const Navbar = () => {
             return (
               <button
                 key={item.name}
-                onClick={() => {
-                  setActiveItem(item.name);
-                  setShowContestDropdown(false);
-                }}
+                onClick={() => handleMobileNavItemClick(item.name)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-all duration-300 w-full text-left bg-transparent border-none cursor-pointer transform hover:scale-105 hover:translate-x-1 group ${
                   isActive
                     ? 'text-primary bg-yellow-50 scale-105'
@@ -351,6 +391,7 @@ const Navbar = () => {
               onClick={() => {
                 setActiveItem('Login');
                 setShowContestDropdown(false);
+                setIsMenuOpen(false);
                 // Add any login logic here
               }}
               className="text-black hover:text-white w-full px-3 py-2 rounded-md bg-gray-100 hover:bg-gray-800 transition-all duration-300 shadow-sm transform hover:scale-100 group">
@@ -360,6 +401,7 @@ const Navbar = () => {
               onClick={() => {
                 setActiveItem('Signup');
                 setShowContestDropdown(false);
+                setIsMenuOpen(false);
                 // Add any signup logic here
               }}
               className="w-full bg-primary text-black px-3 py-2 rounded-md font-medium hover:bg-yellow-400 transition-all duration-300 shadow-sm transform hover:scale-100 group">

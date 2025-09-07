@@ -1,12 +1,36 @@
-import React from "react";
-import Navbar from "./components/layout/Navbar";
+import React, { useState } from 'react';
+import Navbar from './components/layout/Navbar';
+import StyleImpactApp from './pages/Welcome/WelcomePage';
 
-const App = () => {
+function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const handleNavigation = (page) => {
+    // Convert navbar menu items to page names
+    const pageMapping = {
+      'Home': 'home',
+      'Categories': 'categories', 
+      'How it Works': 'how-it-works',
+      'Winners': 'winners',
+      'Contact': 'contact'
+    };
+    
+    const mappedPage = pageMapping[page] || page.toLowerCase().replace(/\s+/g, '-');
+    setCurrentPage(mappedPage);
+  };
+
   return (
-    <>
-      <Navbar/>
-    </>
+    <div className="App">
+      <Navbar 
+        currentPage={currentPage}
+        onNavigate={handleNavigation}
+      />
+      <StyleImpactApp 
+        currentPage={currentPage}
+        onNavigate={setCurrentPage}
+      />
+    </div>
   );
-};
+}
 
 export default App;
