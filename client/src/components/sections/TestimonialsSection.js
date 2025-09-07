@@ -28,7 +28,7 @@ const TestimonialsSection = () => (
           </p>
           <div className="flex items-center">
             <img 
-              src="https://images.unsplash.com/photo-1494790108755-2616c67e8b2d?w=50&h=50&fit=crop&crop=face" 
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" 
               alt="Priya Sharma"
               className="w-10 sm:w-12 h-10 sm:h-12 rounded-full mr-3 sm:mr-4 flex-shrink-0"
             />

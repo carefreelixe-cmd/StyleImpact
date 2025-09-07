@@ -18,7 +18,7 @@ const PromoBannerSection = () => (
         </div>
         <div className="relative order-1 lg:order-2">
           <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" 
+            src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=400&fit=crop"
             alt="Creative Competition"
             className="rounded-xl shadow-2xl w-full"
           />
