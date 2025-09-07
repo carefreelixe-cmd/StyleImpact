@@ -75,7 +75,9 @@ const WelcomePage = ({ currentPage, onNavigate }) => {
         <HowItWorksSection />
       </div>
       <NewsletterSection />
-      <FAQSection />
+      <div id="faq-section">
+        <FAQSection />
+      </div>
       <div id="footer-section">
         <FooterSection />
       </div>

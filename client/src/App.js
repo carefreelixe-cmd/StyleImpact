@@ -12,7 +12,8 @@ function App() {
       'Categories': 'categories', 
       'How it Works': 'how-it-works',
       'Winners': 'winners',
-      'Contact': 'contact'
+      'Contact': 'contact',
+      'FAQ': 'faq'
     };
     
     const mappedPage = pageMapping[page] || page.toLowerCase().replace(/\s+/g, '-');
