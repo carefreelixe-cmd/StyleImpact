@@ -9,7 +9,7 @@ import TestimonialsSection from '../../components/sections/TestimonialsSection';
 import HowItWorksSection from '../../components/sections/HowItWorksSection';
 import NewsletterSection from '../../components/sections/NewsletterSection';
 import FAQSection from '../../components/sections/FAQSection';
-import FooterSection from '../../components/sections/FooterSection';
+import Footer from '../../components/layout/Footer';
 
 const WelcomePage = ({ currentPage, onNavigate }) => {
   // Scroll to Top Button State and Handler
@@ -79,7 +79,7 @@ const WelcomePage = ({ currentPage, onNavigate }) => {
         <FAQSection />
       </div>
       <div id="footer-section">
-        <FooterSection />
+        <Footer />
       </div>
       
       {/* Scroll to Top Button */}
