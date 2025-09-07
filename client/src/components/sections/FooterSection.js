@@ -1,11 +1,11 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, Youtube, Gift, Zap, Shield, HeartHandshake } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const FooterSection = () => (
   <footer className="bg-gray-900 text-white py-12 sm:py-16">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       {/* Main Footer Content */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <h3 className="text-lg sm:text-xl font-bold text-primary mb-3 sm:mb-4">Style Impact</h3>
@@ -41,22 +41,11 @@ const FooterSection = () => (
             <li><button className="hover:text-primary transition-colors text-left">Privacy Policy</button></li>
           </ul>
         </div>
-        
-        {/* Features */}
-        <div>
-          <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Platform Features</h4>
-          <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-            <li className="flex items-center"><Gift className="w-3 sm:w-4 h-3 sm:h-4 mr-2 flex-shrink-0" />Big Prize Pool</li>
-            <li className="flex items-center"><Zap className="w-3 sm:w-4 h-3 sm:h-4 mr-2 flex-shrink-0" />Quick Submission</li>
-            <li className="flex items-center"><Shield className="w-3 sm:w-4 h-3 sm:h-4 mr-2 flex-shrink-0" />Secure Payments</li>
-            <li className="flex items-center"><HeartHandshake className="w-3 sm:w-4 h-3 sm:h-4 mr-2 flex-shrink-0" />Fair Judging</li>
-          </ul>
-        </div>
       </div>
       
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
-        <p>© 2024 Style Impact. All rights reserved.</p>
+        <p>© 2025 Style Impact. All rights reserved.</p>
       </div>
     </div>
   </footer>
