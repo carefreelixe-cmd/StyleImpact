@@ -1,6 +1,8 @@
 import React from 'react';
 import { Star } from 'lucide-react';
 
+import Mehendi from '../../assests/mehendi.jpg'
+
 const CategoriesSection = () => (
   <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +71,7 @@ const CategoriesSection = () => (
           <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
             <div className="aspect-[4/5] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=500&fit=crop" 
+                src="https://m.media-amazon.com/images/I/51n6fSKIb9L._SY300_SX300_QL70_FMwebp_.jpg" 
                 alt="Tattoo Art"
                 className="w-full h-full object-cover"
               />
@@ -94,7 +96,7 @@ const CategoriesSection = () => (
           <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
             <div className="aspect-[4/5] bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" 
+                src={Mehendi} 
                 alt="Mehndi Art"
                 className="w-full h-full object-cover"
               />
